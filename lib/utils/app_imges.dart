@@ -46,6 +46,7 @@ class Assets {
 
   /// Assets for imagesSetting
   /// assets/images/setting.svg
+  /// D:\responsive_dash_board\assets\images\setting-2.svg
   static const String imagesSetting = "assets/images/setting-2.svg";
 
   /// Assets for imagesStatics

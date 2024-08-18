@@ -24,9 +24,9 @@ class _DrawerItemListState extends State<DrawerItemList> {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
+    return SliverList.builder(
+      // shrinkWrap: true,
+      // physics: const NeverScrollableScrollPhysics(),
       itemCount: items.length,
       itemBuilder: (context, index) {
         return GestureDetector(
@@ -39,7 +39,7 @@ class _DrawerItemListState extends State<DrawerItemList> {
             }
           },
           child: Padding(
-            padding: const EdgeInsets.only(top: 20.0),
+            padding: const EdgeInsets.only(top: 10.0),
             child: DrawerItem(
               drawerItemModel: items[index],
               isSelected: selectedIndex == index,
