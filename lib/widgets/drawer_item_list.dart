@@ -3,12 +3,18 @@ import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_imges.dart';
 import 'package:responsive_dash_board/widgets/drawer_item.dart';
 
-class DrawerItemList extends StatelessWidget {
+class DrawerItemList extends StatefulWidget {
   const DrawerItemList({
     super.key,
   });
 
-  static const List<DrawerItemModel> items = [
+  @override
+  State<DrawerItemList> createState() => _DrawerItemListState();
+}
+
+class _DrawerItemListState extends State<DrawerItemList> {
+  int selectedIndex = 0;
+  final List<DrawerItemModel> items = const [
     DrawerItemModel(title: 'Dashboard', svgSrc: Assets.imagescategry2),
     DrawerItemModel(
         title: 'My Transaction', svgSrc: Assets.imagesMytransaction),
@@ -16,7 +22,6 @@ class DrawerItemList extends StatelessWidget {
     DrawerItemModel(title: 'Wallet Account', svgSrc: Assets.imagesWallet),
     DrawerItemModel(title: 'My Investments', svgSrc: Assets.imagesInvestment),
   ];
-
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -24,9 +29,22 @@ class DrawerItemList extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(top: 20.0),
-          child: DrawerItem(drawerItemModel: items[index]),
+        return GestureDetector(
+          onTap: () {
+            if (selectedIndex != index) {
+              setState(() {
+                selectedIndex = index;
+                //print(selectedIndex);
+              });
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20.0),
+            child: DrawerItem(
+              drawerItemModel: items[index],
+              isSelected: selectedIndex == index,
+            ),
+          ),
         );
       },
     );
