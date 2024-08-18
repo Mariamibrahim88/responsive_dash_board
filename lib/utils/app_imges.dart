@@ -1,6 +1,6 @@
 class Assets {
   Assets._();
-  
+
   /// Assets for imagesAvatar1
   /// assets/images/avatar1.svg
   static const String imagesAvatar1 = "assets/images/avatar1.svg";
@@ -8,6 +8,8 @@ class Assets {
   /// Assets for imagesAvatar2
   /// assets/images/avatar2.svg
   static const String imagesAvatar2 = "assets/images/avatar2.svg";
+  //D:\responsive_dash_board\assets\images\category-2.svg
+  static const String imagescategry2 = "assets/images/category-2.svg";
 
   /// Assets for imagesBalance
   /// assets/images/balance.svg
@@ -31,7 +33,7 @@ class Assets {
 
   /// Assets for imagesInvestment
   /// assets/images/investment.svg
-  static const String imagesInvestment = "assets/images/investment.svg";
+  static const String imagesInvestment = "assets/images/chart-2.svg";
 
   /// Assets for imagesLogout
   /// assets/images/logout.svg
@@ -39,15 +41,16 @@ class Assets {
 
   /// Assets for imagesMytransaction
   /// assets/images/mytransaction.svg
-  static const String imagesMytransaction = "assets/images/mytransaction.svg";
+  /// D:\responsive_dash_board\assets\images\convert-card.svg
+  static const String imagesMytransaction = "assets/images/convert-card.svg";
 
   /// Assets for imagesSetting
   /// assets/images/setting.svg
-  static const String imagesSetting = "assets/images/setting.svg";
+  static const String imagesSetting = "assets/images/setting-2.svg";
 
   /// Assets for imagesStatics
   /// assets/images/statics.svg
-  static const String imagesStatics = "assets/images/statics.svg";
+  static const String imagesStatics = "assets/images/graph.svg";
 
   /// Assets for imagesTransaction
   /// assets/images/transaction.zip
@@ -55,10 +58,10 @@ class Assets {
 
   /// Assets for imagesVuesaxTwotoneConvertCard
   /// assets/images/vuesax/twotone/convert-card.svg
-  static const String imagesVuesaxTwotoneConvertCard = "assets/images/vuesax/twotone/convert-card.svg";
+  static const String imagesVuesaxTwotoneConvertCard =
+      "assets/images/vuesax/twotone/convert-card.svg";
 
   /// Assets for imagesWallet
   /// assets/images/wallet.svg
-  static const String imagesWallet = "assets/images/wallet.svg";
+  static const String imagesWallet = "assets/images/wallet-2.svg";
 }
-
